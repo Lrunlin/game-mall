@@ -1,0 +1,14 @@
+**/node_modules/**/*
+
+dist
+.next
+.idea
+.vscode
+.DS_Store
+*.local
+论文.doc
+/项目代码代/**
+/**/public/**/*.avif
+/**/public/**/*.jpg
+/**/public/**/*.png
+/**/public/**/*.webp
