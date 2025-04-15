@@ -1,7 +1,7 @@
 const Router = require("koa-router");
 const db = require("@/db");
 const auth = require("@/modules/auth");
-const id = require("@/utils/id");
+const { id } = require("lodash-toolkit");
 
 const router = new Router();
 

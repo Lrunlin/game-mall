@@ -1,5 +1,4 @@
 let Router = require("koa-router");
-const sign = require("@/modules/signToken");
 let db = require("@/db");
 let auth = require("@/modules/auth");
 let router = new Router();

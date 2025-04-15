@@ -1,12 +1,12 @@
 const Router = require("koa-router");
 const db = require("@/db");
 const auth = require("@/modules/auth");
-const id = require("@/utils/id");
+const { id } = require("lodash-toolkit");
 const router = new Router();
 
 router.post("/commodity", auth(), async ctx => {
   try {
-    const { name, description, cover, banner, price,  inventory, game_type,  tags } =
+    const { name, description, cover, banner, price, inventory, game_type, tags } =
       ctx.request.body;
 
     // 插入商品到数据库

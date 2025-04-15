@@ -3,6 +3,6 @@ const connection = mysql.createPool({
   host: "localhost",
   user: "root",
   database: "game-mall",
-  // password: "",
+  password: "123456",
 });
 module.exports = connection;

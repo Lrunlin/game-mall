@@ -2,7 +2,7 @@ const Router = require("koa-router");
 const db = require("@/db"); // 假设有一个 db 模块用于执行数据库操作
 const auth = require("@/modules/auth");
 const router = new Router();
-const id = require("@/utils/id");
+const { id } = require("lodash-toolkit");
 
 router.post("/notice", auth(), async ctx => {
   try {

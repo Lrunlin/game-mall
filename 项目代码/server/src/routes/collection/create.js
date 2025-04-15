@@ -1,12 +1,12 @@
 const Router = require("koa-router");
 const db = require("@/db");
 const auth = require("@/modules/auth");
-const id = require("@/utils/id");
+const { id } = require("lodash-toolkit");
 const router = new Router();
 
 router.post("/collection", auth(), async ctx => {
   try {
-    const { item_id, } = ctx.request.body;
+    const { item_id } = ctx.request.body;
 
     // 检查是否已经收藏
     const existingCollection = await db.query(

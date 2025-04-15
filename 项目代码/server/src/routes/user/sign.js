@@ -1,5 +1,5 @@
 let Router = require("koa-router");
-const sign = require("@/modules/signToken");
+const { sign } = require("@/modules/jwt");
 let db = require("@/db");
 let router = new Router();
 

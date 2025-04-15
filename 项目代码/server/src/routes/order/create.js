@@ -1,7 +1,7 @@
 const Router = require("koa-router");
 const db = require("@/db");
 const auth = require("@/modules/auth");
-const id = require("@/utils/id");
+const { id } = require("lodash-toolkit");
 const router = new Router();
 
 router.post("/order", auth(), async ctx => {
@@ -50,7 +50,9 @@ router.post("/order", auth(), async ctx => {
     };
 
     if (result[0]?.affectedRows) {
-      await db.query(`UPDATE commodity SET inventory = inventory - ${count} WHERE id = ?`, [commodity_id]);
+      await db.query(`UPDATE commodity SET inventory = inventory - ${count} WHERE id = ?`, [
+        commodity_id,
+      ]);
     }
   } catch (error) {
     console.error(error);

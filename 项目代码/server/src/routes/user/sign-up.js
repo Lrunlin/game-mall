@@ -1,7 +1,7 @@
 const Router = require("koa-router");
 const db = require("@/db");
 const router = new Router();
-const id = require("@/utils/id");
+const { id } = require("lodash-toolkit");
 
 router.post("/user", async ctx => {
   try {

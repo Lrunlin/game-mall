@@ -1,16 +1,4 @@
-let jwt = require("jsonwebtoken");
-
-async function verify(token) {
-  return new Promise((resolve, reject) => {
-    jwt.verify(token, "key", async function (err, decoded) {
-      if (err) {
-        reject();
-      } else {
-        resolve(decoded);
-      }
-    });
-  });
-}
+const { verify } = require("@/modules/jwt");
 
 function auth(isAdmin) {
   return async (ctx, next) => {
